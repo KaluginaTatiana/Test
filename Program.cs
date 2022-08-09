@@ -34,3 +34,19 @@ int NumberOfElementsTreeOrLess(string[] array)
     }
     return count;
 }
+
+string[] array = {"abcd", "abc", "ac", "a", "cde", "12", "dfge", "*"};
+int num = NumberOfElementsTreeOrLess(array);
+if (num > 0)
+{
+    string[] arrayNew = new string[num];
+    FillArrayNew(array, arrayNew);
+    Console.WriteLine("Первичный массив:");
+    PrintArray(array);
+    Console.WriteLine("Новый массив:");
+    PrintArray(arrayNew);
+}
+else
+{
+    Console.WriteLine("В массиве нет элементов, длина которых менее 3 символов.");
+}
